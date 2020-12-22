@@ -618,14 +618,24 @@ textarea {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  /* position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; */
 }
 .checkbox-label {
   display: inline-block;
 }
 
-.checkbox:checked + .checkbox-label ::before {
+.checkbox:checked + .checkbox-label::before {
   background-color: var(--accent-text);
-  background-image: url("../imeges/check.svg");
+  background-image: url("../imeges/icon-check.svg");
   border-width: 0;
 }
 .checkbox-label::before {
