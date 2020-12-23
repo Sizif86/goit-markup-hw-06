@@ -32,9 +32,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
-a {
-  text-decoration: none;
-}
 
 .page-header {
   padding: 24px 0px;
@@ -70,12 +67,12 @@ a {
 .img:hover {
   background-color: var(--accent-text);
 }
-.site-nav:hover,
-.site-nav:focus {
+.link:hover,
+.link:focus {
   color: var(--accent-text);
 }
 
-.nav-link.current {
+.link.current {
   color: var(--accent-text);
 }
 .mail-link,
@@ -83,7 +80,7 @@ a {
   color: var(--primary-white-color);
   font-style: normal;
 }
-.nav-link.current::after {
+.link.current::after {
   content: "";
   display: block;
   width: 100%;
@@ -147,38 +144,60 @@ p {
   align-items: center;
   margin-right: auto;
 }
-.menu-list {
-  display: flex;
-}
+
 .menu-item:not(:last-child) {
   margin-right: 50px;
 }
 .site-nav {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--text-title-color);
+  display: flex;
+  margin-left: 85px;
+}
+.site-nav .link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  color: var(--text-title-color);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color var(--time-animation) var(--time-function);
 }
 .link {
   color: var(--accent-text);
 }
-.mail-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+.work-list-img.link {
+  text-decoration: none;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-text);
+}
+.adress {
+  margin-left: auto;
+  font-style: normal;
+}
+
+.address-nav {
+  display: flex;
+}
+.address-link {
   color: var(--main-text-color);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color var(--time-animation) var(--time-function);
 }
-.mail-link {
-  margin-right: 30px;
+.site-nav .link.current {
+  color: var(--accent-text);
 }
-.icon-envelop {
-  width: 18px;
-  height: 14px;
+.address-link:focus,
+.address-link:hover {
+  color: var(--accent-text);
 }
+.address-nav .item + .item {
+  margin-left: 30px;
+}
+
 .icon-header {
   margin-right: 10px;
   fill: currentColor;
@@ -194,17 +213,6 @@ p {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.tel-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--main-text-color);
-}
-.icon-phone {
-  width: 18px;
-  height: 14px;
 }
 
 /*Герой*/
@@ -263,7 +271,7 @@ p {
   background: #f5f4fa;
   border-radius: 4px;
 }
-.button-head {
+.button {
   display: inline-block;
   min-width: 200px;
   padding: 10px 32px;
@@ -277,9 +285,10 @@ p {
   text-decoration: none;
   text-align: center;
 }
-.button-head {
+.modal .button {
   margin-left: auto;
   margin-right: auto;
+  display: block;
 }
 .title-detalis {
   font-weight: 700;
