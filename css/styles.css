@@ -671,6 +671,7 @@ textarea {
 }
 .form-link {
   color: #2196f3;
+  text-decoration: underline;
 }
 /*Portfolio*/
 .link-portfolio {
