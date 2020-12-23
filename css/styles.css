@@ -32,6 +32,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
+a {
+  text-decoration: none;
+}
 
 .page-header {
   padding: 24px 0px;
