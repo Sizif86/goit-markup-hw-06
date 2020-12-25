@@ -182,6 +182,7 @@ p {
 
 .address-nav {
   display: flex;
+  font-style: normal;
 }
 .address-link {
   color: var(--main-text-color);
